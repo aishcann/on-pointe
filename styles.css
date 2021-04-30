@@ -4,12 +4,17 @@ body {
 }
 
 div {
-    background-color: plum;
+    background-color:plum;
     text-align: center;
-    height: 300px;
+    height: 400px;
     width: 400px;
+    margin:auto;
 }
 
 p {
     height: 100px;
+}
+
+.next, .previous {
+    display: none;
 }
