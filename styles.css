@@ -15,6 +15,26 @@ body {
     color: #F5EFFF;
     border-radius: 10px;
 }
+
+.progress-bar {
+    background-color:  #A594F9;
+    height: 30px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: none;
+}
+
+.progress-status {
+    background-color: #F5EFFF;
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    color: #7371FC;
+}
+
 .start-page {
     background-color: #A594F9;
     text-align: center;
@@ -48,8 +68,7 @@ h2 {
 
 .question-text {
     height: 100px;
-    font-size:
-
+    padding: auto;
 }
 
 .results {
@@ -66,6 +85,16 @@ button {
     border-radius: 5px;
     background-color: #F5EFFF;
     color: #7371FC;
+    font-family: 'crimson text', serif;
+}
+
+.final-score {
+    padding: .5rem;
+    border-radius: 50px;
+    background-color: #7371FC ;
+    color: #F5EFFF;
+    border: 2px solid #F5EFFF;
+    display: none;
 }
 
 .submit {
@@ -73,4 +102,25 @@ button {
     border-radius: 5px;
     background-color: #F5EFFF;
     color: #7371FC;
+    font-family: 'crimson text', serif;
+}
+
+.answer-text {
+    border: solid #F5EFFF;
+    border-radius: 5px;
+    color: #7371FC;
+}
+
+.end-page {
+    background-color: #A594F9;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    color: #F5EFFF;
+    border-radius: 10px;
 }

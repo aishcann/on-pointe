@@ -10,39 +10,38 @@ const questions = [
     {question: 'Arriere is to front, as derriere is to ...',
     answer: 'back'},
 ]
-// console.log(questions)
 
 const startGame = document.querySelector('.start-game')
-// console.log(startGame)
 const startOver = document.querySelector('.start-over')
-// console.log(startOver)r
 const submit = document.querySelector('.submit')
-// console.log(submit)
 const previous = document.querySelector('.previous')
-
 const next = document.querySelector('.next')
-// console.log(next)
 const questionText = document.querySelector('.question-text')
-// console.log(questionText)
 const results = document.querySelector('.results')
-// console.log(results)
 const answerText = document.querySelector('.answer-text')
-// console.log(answerText)
 const resultsMessage = document.querySelector('.results-message')
-// console.log(resultsMessage)
 const answerForm = document.querySelector('.answer-form')
-// console.log(answerForm)
 const gameDiv = document.querySelector('.game')
-
 const startPage = document.querySelector('.start-page')
+const progressBar = document.querySelector('.progress-bar')
+let progressStatus = document.querySelector('.progress-status')
+const finalScore = document.querySelector('.final-score')
+const endPage = document.querySelector('.end-page')
+const displayScore = document.querySelector('.display-score')
+const endMessage = document.querySelector('.end-message')
+const restartGame = document.querySelector('.restart')
 
 let index = 0
+let progressStatusWidth = 20
+let triviaScore = 0
 
 startGame.addEventListener('click', function () {
     index = 0
     questionText.innerText = questions[index].question
     gameDiv.style.display = 'inline-block'
     startPage.style.display = 'none'
+    progressBar.style.display ='inline-block'
+    progressStatus.innerText = `${index+1}/5`
 })
 
 startOver.addEventListener('click', function () {
@@ -50,13 +49,21 @@ startOver.addEventListener('click', function () {
     questionText.innerText = questions[index].question
     results.innerText = ''
     resultsMessage.innerText = ''
+    progressBar.style.display ='inline-block'
+    progressStatusWidth =20
+    progressStatus.style.width = `${progressStatusWidth}%`
+    progressStatus.innerText = `${index+1}/5`
 })
 
 next.addEventListener('click', function (event) {
     if (index <4) {
         index++
+        progressStatusWidth += 20
+        progressStatus.style.width = `${progressStatusWidth}%`
+        progressStatus.innerText = `${index+1}/5`
     }
     questionText.innerText = questions[index].question
+    answerText.value = ''
     results.innerText = ''
     resultsMessage.innerText = ''
 })
@@ -64,8 +71,12 @@ next.addEventListener('click', function (event) {
 previous.addEventListener('click', function () {
     if (index > 0){
         index--
+        progressStatusWidth -= 20
+        progressStatus.style.width = `${progressStatusWidth}%`
+        progressStatus.innerText = `${index+1}/5`
     }
     questionText.innerText = questions[index].question
+    answerText.value = ''
     results.innerText = ''
     resultsMessage.innerText = ''
 })
@@ -75,8 +86,41 @@ answerForm.addEventListener('submit', function (event) {
     results.innerText = questions[index].answer
     if (answerText.value.toLowerCase() == questions[index].answer) {
         resultsMessage.innerText = "Aye! You're on pointe!"
+        triviaScore += 20
     } else {
         resultsMessage.innerText = "Not quite on pointe!"
     }
     answerText.value = ''
+    
+    if (index===4){
+        finalScore.style.display = 'inline-block'
+    }
+})
+
+finalScore.addEventListener('click', function () {
+    gameDiv.style.display = 'none'
+    endPage.style.display ='inline-block'
+    displayScore.innerText = `${triviaScore}%`
+    if (triviaScore <= 60) {
+        endMessage.innerText = 'Looks like your skills need a bit more work'
+    } else if (60 < triviaScore <= 80) {
+        endMessage.innerText = "You're almost there!"
+    } else if (80 < triviaScore <= 100) {
+        endMessage.innerText =  "Misty Copeland, anyone? You are definitely on pointe!"
+    }
+})
+
+restartGame.addEventListener('click', function () {
+    index = 0
+    triviaScore = 0
+    endPage.style.display = 'none'
+    finalScore.style.display ='none'
+    gameDiv.style.display = 'inline-block'
+    questionText.innerText = questions[index].question
+    results.innerText = ''
+    resultsMessage.innerText = ''
+    progressBar.style.display ='inline-block'
+    progressStatusWidth =20
+    progressStatus.style.width = `${progressStatusWidth}%`
+    progressStatus.innerText = `${index+1}/5`
 })

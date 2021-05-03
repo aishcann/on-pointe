@@ -13,12 +13,14 @@
     <div class ='header'>
         <h1>On Pointe! <br> Ballet Trivia </h1>
     </div>
-    
+    <div class='progress-bar'>
+        <div class='progress-status'>
+        </div>
+    </div>
     <div class="start-page">
         <h2>Quizzing you on the fundamentals of ballet!</h2>
         <button class='start-game'>Start Game</button>
     </div>
-  
     <div class = 'game'>
         <h3 class="progress-bar"></h3>
         <p class='question-text'>Quizzing you on the fundamentals of ballet!</p>
@@ -31,7 +33,16 @@
         <button class='previous'>Previous</button>
         <button class='next'>Next</button><br><br>
         <!-- <button class='start-game'>Start Game</button> -->
+        <button class='final-score'>Final Score</button><br><br>
         <button class= 'start-over'>Start Over</button>
+  
+    </div>
+    <div class='end-page'>
+        <h2> You finished!</h2>
+        <h4>Let's see how you did...</h4>
+        <h2 class='display-score'></h2>
+        <h4 class='end-message'></h4>
+        <button class= 'restart'>Start Over</button>
     </div>
     <script src="app.js"></script>
 </body>
