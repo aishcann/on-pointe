@@ -32,19 +32,24 @@ const resultsMessage = document.querySelector('.results-message')
 // console.log(resultsMessage)
 const answerForm = document.querySelector('.answer-form')
 // console.log(answerForm)
+const gameDiv = document.querySelector('.game')
+
+const startPage = document.querySelector('.start-page')
 
 let index = 0
 
 startGame.addEventListener('click', function () {
     index = 0
     questionText.innerText = questions[index].question
-    next.style.display = 'inline-block'
-    previous.style.display = 'inline-block'
+    gameDiv.style.display = 'inline-block'
+    startPage.style.display = 'none'
 })
 
 startOver.addEventListener('click', function () {
-    questionText.innerText = ''
+    index = 0
+    questionText.innerText = questions[index].question
     results.innerText = ''
+    resultsMessage.innerText = ''
 })
 
 next.addEventListener('click', function (event) {
@@ -69,7 +74,7 @@ answerForm.addEventListener('submit', function (event) {
     event.preventDefault()
     results.innerText = questions[index].answer
     if (answerText.value.toLowerCase() == questions[index].answer) {
-        resultsMessage.innerText = "Aye! You're ON POINTE!"
+        resultsMessage.innerText = "Aye! You're on pointe!"
     } else {
         resultsMessage.innerText = "Not quite on pointe!"
     }

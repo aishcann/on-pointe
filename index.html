@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>On Pointe! Ballet Trivia</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Rouge+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>On Pointe! <br> Ballet Trivia </h1>
-    <div>
+    <div class ='header'>
+        <h1>On Pointe! <br> Ballet Trivia </h1>
+    </div>
+    
+    <div class="start-page">
+        <h2>Quizzing you on the fundamentals of ballet!</h2>
+        <button class='start-game'>Start Game</button>
+    </div>
+  
+    <div class = 'game'>
         <h3 class="progress-bar"></h3>
         <p class='question-text'>Quizzing you on the fundamentals of ballet!</p>
         <form class='answer-form'>
             <input type="text" class ='answer-text' required>
-            <input type="submit" value="submit" class='submit'>
+            <input type="submit" value="Submit" class='submit'>
         </form>
         <p class='results'></p>
         <h4 class='results-message'></h4>
         <button class='previous'>Previous</button>
         <button class='next'>Next</button><br><br>
-        <button class='start-game'>Start Game</button>
+        <!-- <button class='start-game'>Start Game</button> -->
         <button class= 'start-over'>Start Over</button>
     </div>
     <script src="app.js"></script>

@@ -1,20 +1,76 @@
 body {
     background-color: whitesmoke;
     text-align: center;
+    font-family: 'Crimson Text', serif;
+    background-color: #E5D9F2;
 }
 
-div {
-    background-color:plum;
+.header {
+    font-family: 'rouge script', cursive;
+    font-weight: bold;
+    background-color: #A594F9;
+    margin: auto;
+    width: 400px;
+    font-size: 20px;
+    color: #F5EFFF;
+    border-radius: 10px;
+}
+.start-page {
+    background-color: #A594F9;
     text-align: center;
     height: 400px;
     width: 400px;
     margin:auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    color: #F5EFFF;
+    border-radius: 10px;
 }
 
-p {
-    height: 100px;
+h2 {
+    padding: 5rem;
 }
-
-.next, .previous {
+.game {
+    background-color: #A594F9;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     display: none;
+    color: #F5EFFF;
+    border-radius: 10px;
+}
+
+.question-text {
+    height: 100px;
+    font-size:
+
+}
+
+.results {
+    font-size: 26px;
+}
+
+.results-message {
+    font-family: 'rouge script', cursive;
+    font-size: 36px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: #F5EFFF;
+    color: #7371FC;
+}
+
+.submit {
+    border: none;
+    border-radius: 5px;
+    background-color: #F5EFFF;
+    color: #7371FC;
 }
