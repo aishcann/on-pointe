@@ -86,9 +86,21 @@ answerForm.addEventListener('submit', function (event) {
     results.innerText = questions[index].answer
     if (answerText.value.toLowerCase() == questions[index].answer) {
         resultsMessage.innerText = "Aye! You're on pointe!"
+        resultsMessage.style.visibility = 'visible'
+        resultsMessage.style.opacity = 1
+        setTimeout(() => {
+            resultsMessage.style.visibility = "hidden"
+            resultsMessage.style.opacity = 0
+        }, 2000)
         triviaScore += 20
     } else {
         resultsMessage.innerText = "Not quite on pointe!"
+        resultsMessage.style.visibility = "visible"
+        resultsMessage.style.opacity = 1
+        setTimeout(() => {
+            resultsMessage.style.visibility = "hidden"
+            resultsMessage.style.opacity = 0
+        }, 2000)
     }
     answerText.value = ''
     
