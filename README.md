@@ -6,19 +6,10 @@ View the deployed version [here]: (https://aishcann.github.io/on-pointe/)
 
 No installation required.
 
-# Wireframes
-
-Start Page
-
-![Screen Shot 2021-05-05 at 10 42 24 AM](https://user-images.githubusercontent.com/81989356/117161269-c57a7e80-ad8f-11eb-868c-188e31764e30.png)
-
-Game Page
-
 ![Screen Shot 2021-05-05 at 10 42 35 AM](https://user-images.githubusercontent.com/81989356/117161446-e7740100-ad8f-11eb-827d-9ec21e5204cc.png)
+# Wireframe
 
-Results Page
-
-![Screen Shot 2021-05-05 at 10 42 53 AM](https://user-images.githubusercontent.com/81989356/117161518-f8bd0d80-ad8f-11eb-95ae-e53d5b5b8859.png)
+![Screen Shot 2021-04-29 at 10 48 36 AM](https://user-images.githubusercontent.com/81989356/117162049-708b3800-ad90-11eb-87a4-3b40a3b86aa5.png)
 
 # User Stories
 
@@ -35,7 +26,3 @@ Results Page
 The biggest hurdle in the project was styling. In particular, keeping text contained within the divs and having all elements stay inline on the page.
 
 Another hurdle was the progress bar. I had to learn how to create one and get it to progress (or regress) with each question. I aggregated information from the following links to create the one present in the game: [here] (https://www.youtube.com/watch?v=kjhsS4lNZ9o&t=610s) and [here] (https://www.youtube.com/watch?v=U-4tg5snUuw&t=422s)
-
-# Unsolved Problems
-
-Continuing with styling, in my deployed site, my progress bar keeps moving from being in line with the rest of the body, to the left of the game.  This does not happen when I work with the game in VSCode.  I'm still figuring out what is happening here.
